@@ -1,0 +1,30 @@
+
+.container {
+    margin: 5%;
+}
+
+.hit-display {
+    padding-top: 1em;
+}
+
+.result-description {
+    padding-bottom: 1em;
+}
+
+.result-display {
+    display: flex;
+    align-items: center;
+    padding-bottom: 1em;
+
+    span {
+        padding-right: 5px;
+    }
+}
+
+.hit-icon {
+    color: green;
+}
+
+.miss-icon {
+    color: red;
+}

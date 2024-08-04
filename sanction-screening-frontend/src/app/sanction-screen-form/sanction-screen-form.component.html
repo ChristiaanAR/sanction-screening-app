@@ -1,0 +1,15 @@
+<form [formGroup]="screeningForm" (ngSubmit)="sendScreeningInfo()">
+    <div class="input-row">
+        <label for="name">Name: </label>
+        <input id="name" type="text" formControlName="name">
+    </div>
+    <div class="input-row">
+        <label for="dateOfBirth">Date of Birth: </label>
+        <input id="dateOfBirth"  type="date" formControlName="dateOfBirth" />
+    </div>
+    <div class="input-row">
+        <label for="country">Country: </label>
+        <input id="country" type="text" formControlName="country" />
+    </div>
+    <input type="submit" value="Submit" [disabled]="screeningForm.invalid || submitDisabled">
+</form>

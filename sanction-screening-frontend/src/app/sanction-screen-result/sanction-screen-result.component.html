@@ -1,0 +1,23 @@
+<div class="container">
+    <h5>Screening results</h5>
+    <b>{{ resultText }}</b>
+    <div *ngIf="data.nameMatch || data.dateOfBirthMatch || data.countryMatch" class="hit-display">
+        <hr>
+        <div class="result-description">The customer has the following matches against the SDN list</div>
+        <div class="result-display">
+            <span>Name:</span>
+            <mat-icon *ngIf="!data.nameMatch" class="miss-icon" aria-hidden="false" aria-label="No name match" fontIcon="block"></mat-icon>
+            <mat-icon *ngIf="data.nameMatch" class="hit-icon" aria-hidden="false" aria-label="Name match" fontIcon="task_alt"></mat-icon>
+        </div>
+        <div class="result-display">
+            <span>Date of Birth:</span>
+            <mat-icon *ngIf="!data.dateOfBirthMatch" class="miss-icon" aria-hidden="false" aria-label="No date of birth match" fontIcon="block"></mat-icon>
+            <mat-icon *ngIf="data.dateOfBirthMatch" class="hit-icon" aria-hidden="false" aria-label="Date of birth match" fontIcon="task_alt"></mat-icon>
+        </div>
+        <div class="result-display">
+            <span>Country:</span>
+            <mat-icon *ngIf="!data.countryMatch" class="miss-icon" aria-hidden="false" aria-label="No country match" fontIcon="block"></mat-icon>
+            <mat-icon *ngIf="data.countryMatch" class="hit-icon" aria-hidden="false" aria-label="Country match" fontIcon="task_alt"></mat-icon>
+        </div>
+    </div>
+</div>
